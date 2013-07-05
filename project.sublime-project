@@ -1,0 +1,26 @@
+{
+	"folders":
+	[
+		{
+			"folder_exclude_patterns":
+			[
+				"*"
+			],
+			"name": ".root",
+			"path": "/E/Dropbox/www/octo"
+		},
+		{
+			"name": "_posts",
+			"path": "source/_posts"
+		},
+		{
+			"path": "plugins"
+		},
+		{
+			"path": "sass"
+		},
+		{
+			"path": "source"
+		}
+	]
+}
