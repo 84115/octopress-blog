@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: VLE | James Ball]]></title>
+  <link href="http://james-ball.co.uk/blog/categories/vle/atom.xml" rel="self"/>
+  <link href="http://james-ball.co.uk/"/>
+  <updated>2013-07-08T00:24:51+01:00</updated>
+  <id>http://james-ball.co.uk/</id>
+  <author>
+    <name><![CDATA[James Ball]]></name>
+    <email><![CDATA[hello@james-ball.co.uk]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[FrogOS: Trial Scheme]]></title>
+    <link href="http://james-ball.co.uk/blog/2013/06/21/frogos-trial-scheme/"/>
+    <updated>2013-06-21T18:59:00+01:00</updated>
+    <id>http://james-ball.co.uk/blog/2013/06/21/frogos-trial-scheme</id>
+    <content type="html"><![CDATA[<h3>Analytics</h3>
+
+<p>lorem</p>
+
+<!-- more -->
+
+
+<h3>Assignments</h3>
+
+<p>lorem</p>
+
+<h3>Booking Calendar</h3>
+
+<p>lorem</p>
+
+<h3>Calendar</h3>
+
+<p>lorem</p>
+
+<h3>Community</h3>
+
+<p>lorem</p>
+
+<h3>Forms</h3>
+
+<p>lorem</p>
+
+<h3>My Dashboard</h3>
+
+<p>lorem</p>
+
+<h3>Pin-Point</h3>
+
+<p>lorem
+<div class="youtube-wrapper"><iframe src="http://www.youtube.com/embed/O4LhM-o_2vM" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
+<a href="/assets/images/posts/frogos-trial-scheme/pin-point.jpg"><img class="right" src="/assets/images/posts/frogos-trial-scheme/pin-point.jpg" width="400" height="295" title="Pin-Point" ></a></p>
+
+<h3>Polls</h3>
+
+<p>lorem</p>
+
+<h3>Quizzes</h3>
+
+<p>lorem</p>
+
+<h3>Resource Manager</h3>
+
+<p>lorem</p>
+
+<h3>School Dashboard</h3>
+
+<p>lorem</p>
+
+<h3>Sites</h3>
+
+<p>lorem</p>
+
+<h3>Help Documentation</h3>
+
+<p>lorem</p>
+
+<h3>What about Frog 3?</h3>
+
+<p>lorem</p>
+
+<h3>And, What About Frog Developer Platform?</h3>
+
+<p><img class="left" src="/assets/images/posts/frogos-trial-scheme/frog-developer-platform-game-centre.jpg" width="400" height="295" title="Pin-Point" >
+At the moment you are still required to use the Frog 3 Developer platform, where widget can be embeded into pages in a simmilar manner a sandboxed iframe.
+There is also an issue with handling the height of the xhtml document which is smaller than it should be but behaves correctly in Frog 3.
+Hopefully Frog will release more API features to FrogOS aswell as the option to request several diffrent calls at once, due to the fact that they are sent individual via a proxy and there is a limit of 50/100 returned values on most commands.</p>
+
+<h3>Is it ready do be deployed?</h3>
+
+<p>No.</p>
+]]></content>
+  </entry>
+  
+</feed>

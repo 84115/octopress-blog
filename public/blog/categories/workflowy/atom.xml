@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Workflowy | James Ball]]></title>
+  <link href="http://james-ball.co.uk/blog/categories/workflowy/atom.xml" rel="self"/>
+  <link href="http://james-ball.co.uk/"/>
+  <updated>2013-07-08T00:24:51+01:00</updated>
+  <id>http://james-ball.co.uk/</id>
+  <author>
+    <name><![CDATA[James Ball]]></name>
+    <email><![CDATA[hello@james-ball.co.uk]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Workflowy: Organising My Brain]]></title>
+    <link href="http://james-ball.co.uk/blog/2013/04/08/workflowy-organising-my-brain/"/>
+    <updated>2013-04-08T12:47:00+01:00</updated>
+    <id>http://james-ball.co.uk/blog/2013/04/08/workflowy-organising-my-brain</id>
+    <content type="html"><![CDATA[<h3>Basic Features</h3>
+
+<p>To use Workflowy simply type right on the screen. Write some text and it turns into a bullet point. You can add more bullets and nested bullets, as well as a note which appears underneath attached bullet in a lighter colour.</p>
+
+<p>Bullets can be marked complete, export, copy, and delete any bullet by accessing the bullet menu by clicking on its bullet.</p>
+
+<!-- more -->
+
+
+<h3>Freemium</h3>
+
+<p>You can sign up for Workflowy for free, but the free version has some limitations. It only allows 500 lists or bullets per month, two choices for typeface (serif and sans serif), and no theme support.</p>
+
+<p>Pro accounts, on the other hand, can be backed up to Dropbox, contain an unlimited number of lists, and have a range of options in themes and typefaces. The Pro account costs $4.99 per month or $49 per year.</p>
+
+<h3>Pros</h3>
+
+<ul>
+<li>Deeply nested lists to categorize information</li>
+<li>Hiding complete tasks</li>
+<li>Collaborative editing with other users</li>
+<li>The ability to embed other lists into your lists</li>
+<li>Filter through lists with #tags, @filters and full text search</li>
+<li>Keyboard shortcuts</li>
+</ul>
+
+
+<h3>Cons</h3>
+
+<ul>
+<li>Lack of some useful features such as due dates, deadlines, flags, and calendar integration</li>
+<li>Dropbox backup and password protection requires a Pro account</li>
+<li>Limited support on some older browsers and devices such as Windows Phone 7.8 and lower</li>
+<li>Pro version is only worth getting if you write over 500 bullets per month</li>
+</ul>
+
+
+<h3>The Bottom Line</h3>
+
+<p>Workflowy is a great webapp for creating nested-lists and collaborating with others. With is simplistic design it is easy to use but lacks some useful features.</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: CSS3 | James Ball]]></title>
+  <link href="http://james-ball.co.uk/blog/categories/css3/atom.xml" rel="self"/>
+  <link href="http://james-ball.co.uk/"/>
+  <updated>2013-07-08T00:24:51+01:00</updated>
+  <id>http://james-ball.co.uk/</id>
+  <author>
+    <name><![CDATA[James Ball]]></name>
+    <email><![CDATA[hello@james-ball.co.uk]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[CSS3: Animate Dog Eared Icons]]></title>
+    <link href="http://james-ball.co.uk/blog/2013/06/28/css3-animate-dog-eared-icons/"/>
+    <updated>2013-06-28T17:59:00+01:00</updated>
+    <id>http://james-ball.co.uk/blog/2013/06/28/css3-animate-dog-eared-icons</id>
+    <content type="html"><![CDATA[<p>TLDR: <a href="http://jsfiddle.net/84115/b3nkd/light/">View the demo here</a></p>
+
+<h3>The HTML</h3>
+
+<p>The html for this is  fairly simple. We are going to create a few divs and wrap them inside links.
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">&quot;file orange&quot;</span><span class="nt">&gt;</span><span class="ni">&amp;lt;&amp;#47;&amp;gt;</span><span class="nt">&lt;/div&gt;&lt;/a&gt;</span>
+</span><span class='line'><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">&quot;file blue&quot;</span><span class="nt">&gt;</span>js<span class="nt">&lt;/div&gt;&lt;/a&gt;</span>
+</span><span class='line'><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">&quot;file red&quot;</span><span class="nt">&gt;</span>rb<span class="nt">&lt;/div&gt;&lt;/a&gt;</span>
+</span><span class='line'><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">&quot;file yellow&quot;</span><span class="nt">&gt;</span>py<span class="nt">&lt;/div&gt;&lt;/a&gt;</span>
+</span><span class='line'><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">&quot;file purple&quot;</span><span class="nt">&gt;</span><span class="ni">&amp;lt;</span>?<span class="ni">&amp;gt;</span><span class="nt">&lt;/div&gt;&lt;/a&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<h3>Creating The Icon</h3>
+
+<p>As we are using a link for the HTML we need the CSS to do all the work.</p>
+
+<p>First start off by creating the style for the <code>file</code> classes.
+This will create a rectangular box with text in the center.
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="nc">.file</span><span class="p">{</span>
+</span><span class='line'>  <span class="k">background</span><span class="o">:</span> <span class="m">#b0b0b0</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">border</span><span class="o">-</span><span class="n">radius</span><span class="o">:</span> <span class="m">5px</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">color</span><span class="o">:</span> <span class="m">#fff</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">display</span><span class="o">:</span> <span class="k">inline</span><span class="o">-</span><span class="k">block</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">font-family</span><span class="o">:</span> <span class="n">Helvetica</span><span class="o">,</span> <span class="n">Arial</span><span class="o">,</span> <span class="k">sans-serif</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">font-size</span><span class="o">:</span> <span class="m">64px</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">font-weight</span><span class="o">:</span> <span class="k">bold</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">height</span><span class="o">:</span> <span class="m">150px</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">margin</span><span class="o">:</span> <span class="m">10px</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">padding</span><span class="o">:</span> <span class="m">20px</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">line-height</span><span class="o">:</span> <span class="m">160px</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">text-align</span><span class="o">:</span> <span class="k">center</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">width</span><span class="o">:</span> <span class="m">100px</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<h3>Creating The Dog Ear</h3>
+
+<p>Ok, nothing to fancy so far but we still need to create the dog ear for the top right of the icon. To do this we will be using borders to create a triangle which floats above the <code>div</code> using <code>absolute</code> and <code>relative</code> positioning.</p>
+
+<p>One unusual thing about borders is that the browser draws them at an angle. One side of the border is colored for the colour of it&rsquo;s sides (top, right, bottom, left), and the rest are left transparent. You can set the border width to a higher value e.g. 32px.
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="nc">.border-effect</span><span class="p">{</span>
+</span><span class='line'>  <span class="k">border-color</span><span class="o">:</span>  <span class="nb">red</span> <span class="nb">green</span> <span class="nb">blue</span> <span class="nb">orange</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">border-style</span><span class="o">:</span> <span class="k">solid</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">border-width</span><span class="o">:</span> <span class="m">32px</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">width</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">height</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+And it will output a shape like this.
+<span style="
+  display:inline-block;
+  border-color:  red green blue orange;
+  border-style: solid;
+  border-width: 32px;
+  width: 0;
+  height: 0;
+"></span></p>
+
+<p>Using this technique the left and bottom borders can be set to <code>#888</code> &amp; the top and right to <code>#fff</code>.</p>
+
+<p>Here we have our shape now all we need to do is place it in the corner of our icon.
+<span style="
+  display:inline-block;
+  border-color: #fff #fff #888 #888;
+  border-style: solid;
+  border-width: 32px;
+  width: 0;
+  height: 0;
+"></span>
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="nc">.dog-ear</span><span class="p">{</span>
+</span><span class='line'>  <span class="k">border-color</span><span class="o">:</span> <span class="m">#888</span> <span class="m">#fff</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">border-style</span><span class="o">:</span> <span class="k">solid</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">border-width</span><span class="o">:</span> <span class="m">0</span> <span class="m">32px</span> <span class="m">32px</span> <span class="m">0</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">content</span><span class="o">:</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;;</span>
+</span><span class='line'>  <span class="k">right</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">top</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+If you want to learn more about border shapes take a look at this <a href="http://jonrohan.me/guide/css/creating-triangles-in-css/">post</a> by <a href="http://jonrohan.me">Jon Rohan</a>.</p>
+
+<!-- more -->
+
+
+<h3>Moving The Dog Ear</h3>
+
+<p>First lets rename our <code>.dog-ear</code> to <code>.file:before</code>. This will make the element appear directly before the and element with the class <code>.file</code>.
+Now we have our dog ear awkwardly sitting inside of our icon before our text; nobody wants that.
+To fix this we will make <code>.file-before</code> use the <code>absolute</code> positioning property. The element positioned relative to its first positioned parent element.
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="nc">.file</span><span class="nd">:before</span><span class="p">{</span>
+</span><span class='line'>  <span class="k">position</span><span class="o">:</span> <span class="k">absolute</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">right</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">top</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+Well now there in the corner of the page, you can fix this by setting <code>.file</code>&rsquo;s position to relative.
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="nc">.file</span><span class="p">{</span>
+</span><span class='line'>  <span class="k">position</span><span class="o">:</span> <span class="k">relative</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<h3>Adding Some Colour</h3>
+
+<p>At the moment all of the elements look a bit drab; add some colour.
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="nc">.orange</span><span class="p">{</span><span class="k">background</span><span class="o">:</span><span class="m">#ff7461</span><span class="p">;}</span><span class="nc">.orange</span><span class="nd">:before</span><span class="p">{</span><span class="k">border-color</span><span class="o">:</span><span class="m">#c65b4b</span> <span class="m">#fff</span><span class="p">;}</span>
+</span><span class='line'><span class="nc">.red</span><span class="p">{</span><span class="k">background</span><span class="o">:</span><span class="m">#ff6161</span><span class="p">;}</span><span class="nc">.red</span><span class="nd">:before</span><span class="p">{</span><span class="k">border-color</span><span class="o">:</span><span class="m">#c64b4b</span> <span class="m">#fff</span><span class="p">;}</span>
+</span><span class='line'><span class="nc">.yellow</span><span class="p">{</span><span class="k">background</span><span class="o">:</span><span class="m">#f4cf77</span><span class="p">;}</span><span class="nc">.yellow</span><span class="nd">:before</span><span class="p">{</span><span class="k">border-color</span><span class="o">:</span><span class="m">#cdad60</span> <span class="m">#fff</span><span class="p">;}</span>
+</span><span class='line'><span class="nc">.blue</span><span class="p">{</span><span class="k">background</span><span class="o">:</span><span class="m">#8cc8ec</span><span class="p">;}</span><span class="nc">.blue</span><span class="nd">:before</span><span class="p">{</span><span class="k">border-color</span><span class="o">:</span><span class="m">#75a8c3</span> <span class="m">#fff</span><span class="p">;}</span>
+</span><span class='line'><span class="nc">.purple</span><span class="p">{</span><span class="k">background</span><span class="o">:</span><span class="m">#b094de</span><span class="p">;</span><span class="k">font-size</span><span class="o">:</span> <span class="m">50px</span><span class="p">;}</span><span class="nc">.purple</span><span class="nd">:before</span><span class="p">{</span><span class="k">border-color</span><span class="o">:</span><span class="m">#8a75ad</span> <span class="m">#fff</span><span class="p">;}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<h3>Animating The Icons</h3>
+
+<p>Now we have our icons finished, but they don&rsquo;t do anything when you interact with them.
+We can use CSS3 transitions and transform to animate the shape when the user hover and clicks it.</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="o">/&lt;</span><span class="nt">em</span><span class="o">&gt;</span> <span class="nt">This</span> <span class="nt">will</span> <span class="nt">reset</span> <span class="nt">the</span> <span class="nt">dog</span> <span class="nt">ear</span> <span class="nt">to</span> <span class="nt">make</span> <span class="nt">it</span> <span class="nt">look</span> <span class="nt">like</span> <span class="nt">it</span> <span class="nt">has</span> <span class="nt">unfolded</span><span class="o">.</span> <span class="o">&lt;/</span><span class="nt">em</span><span class="o">&gt;/</span>
+</span><span class='line'><span class="nc">.file</span><span class="nd">:hover:before</span><span class="p">{</span>
+</span><span class='line'>  <span class="k">border-width</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span><span class="o">&lt;/</span><span class="nt">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nt">p</span><span class="o">&gt;/&lt;</span><span class="nt">em</span><span class="o">&gt;</span> <span class="nt">This</span> <span class="nt">zoom</span> <span class="nt">into</span> <span class="nt">the</span> <span class="nt">icon</span> <span class="nt">when</span> <span class="nt">you</span> <span class="nt">hover</span> <span class="nt">over</span> <span class="nt">it</span><span class="o">.</span> <span class="o">&lt;/</span><span class="nt">em</span><span class="o">&gt;/</span>
+</span><span class='line'><span class="nc">.file</span><span class="nd">:hover</span><span class="p">{</span>
+</span><span class='line'>  <span class="n">transform</span><span class="o">:</span> <span class="n">scale</span><span class="p">(</span><span class="m">1</span><span class="o">.</span><span class="m">05</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span><span class="o">&lt;/</span><span class="nt">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nt">p</span><span class="o">&gt;/&lt;</span><span class="nt">em</span><span class="o">&gt;</span> <span class="nt">This</span> <span class="nt">zoom</span> <span class="nt">out</span> <span class="nt">the</span> <span class="nt">icon</span> <span class="nt">when</span> <span class="nt">you</span> <span class="nt">hover</span> <span class="nt">over</span> <span class="nt">it</span><span class="o">,</span> <span class="nt">then</span> <span class="nt">click</span><span class="o">.</span> <span class="o">&lt;/</span><span class="nt">em</span><span class="o">&gt;/</span>
+</span><span class='line'><span class="nc">.file</span><span class="nd">:hover:active</span><span class="p">{</span>
+</span><span class='line'>  <span class="n">transform</span><span class="o">:</span> <span class="n">scale</span><span class="p">(</span><span class="m">0</span><span class="o">.</span><span class="m">95</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span><span class="o">&lt;/</span><span class="nt">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nt">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Now for the finishing touch: transitions.</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="o">/&lt;</span><span class="nt">em</span><span class="o">&gt;</span> <span class="nt">Don</span><span class="o">&amp;</span><span class="nt">rsquo</span><span class="o">;</span><span class="nt">t</span> <span class="nt">forget</span> <span class="nt">to</span> <span class="nt">specify</span> <span class="nt">which</span> <span class="nt">properties</span> <span class="nt">you</span> <span class="nt">want</span> <span class="nt">to</span> <span class="nt">animate</span> <span class="nt">and</span> <span class="nt">avoid</span> <span class="nt">using</span> <span class="o">&amp;</span><span class="nt">ldquo</span><span class="o">;</span><span class="nt">all</span><span class="o">&amp;</span><span class="nt">rdquo</span><span class="o">;</span> <span class="o">&lt;/</span><span class="nt">em</span><span class="o">&gt;/&lt;/</span><span class="nt">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nt">p</span><span class="o">&gt;</span><span class="nc">.file</span><span class="nd">:before</span><span class="p">{</span>
+</span><span class='line'>  <span class="n">transition</span><span class="o">:</span> <span class="k">border</span> <span class="m">0.2s</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span><span class="o">&lt;/</span><span class="nt">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nt">p</span><span class="o">&gt;</span><span class="nc">.file</span><span class="nd">:hover</span><span class="p">{</span>
+</span><span class='line'>  <span class="n">transition</span><span class="o">:</span> <span class="n">transform</span> <span class="m">0.2s</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Now you animations will smoothly transition between one state to another.</p>
+
+<h3>The Final Product</h3>
+
+<p>View the demo of what we have just created.
+<iframe style="width: 100%; height: 300px" src="http://jsfiddle.net/b3nkd/embedded/result,html,css/light/"></iframe></p>
+]]></content>
+  </entry>
+  
+</feed>

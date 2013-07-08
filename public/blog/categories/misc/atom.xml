@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Misc | James Ball]]></title>
+  <link href="http://james-ball.co.uk/blog/categories/misc/atom.xml" rel="self"/>
+  <link href="http://james-ball.co.uk/"/>
+  <updated>2013-07-08T00:24:51+01:00</updated>
+  <id>http://james-ball.co.uk/</id>
+  <author>
+    <name><![CDATA[James Ball]]></name>
+    <email><![CDATA[hello@james-ball.co.uk]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Test Post Please Ignore]]></title>
+    <link href="http://james-ball.co.uk/blog/2013/06/18/test-post-please-ignore/"/>
+    <updated>2013-06-18T21:37:00+01:00</updated>
+    <id>http://james-ball.co.uk/blog/2013/06/18/test-post-please-ignore</id>
+    <content type="html"><![CDATA[<p>Looks like I have successfully imported my previous posts from Wordpress and deployed Octopress.</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>helloWorld.c </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="n">include</span> <span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">stdio</span><span class="p">.</span><span class="n">h</span><span class="o">&gt;&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="kt">int</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'><span class="n">printf</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">Hello</span> <span class="n">World</span><span class="o">!</span><span class="err">\</span><span class="n">n</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;);</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Typical Student Feedback & Forum Replies]]></title>
+    <link href="http://james-ball.co.uk/blog/2013/05/14/typical-student-feedback-and-forum-replies/"/>
+    <updated>2013-05-14T20:12:00+01:00</updated>
+    <id>http://james-ball.co.uk/blog/2013/05/14/typical-student-feedback-and-forum-replies</id>
+    <content type="html"><![CDATA[<p><blockquote><p>i think its stupid that you can not access games during lessons, what if you have finished?!!!!!!!!!!!</p></blockquote></p>
+
+<p><blockquote><p>i spot on matti sooperman can laza hulks shorts off wid his eyes all de time</p></blockquote></p>
+
+<p><blockquote><p>the fact bloonstd4 has gone and i dont have my 50 leap poins is ridiculous im so angry. I WANT MY LEAP POINTS BACK NOW!!!!!!!!!!!!!<br/>Such a disgrace that i have lost my leap points!!</p></blockquote></p>
+
+<p><blockquote><p>I love my little pony its great ;)</p></blockquote></p>
+]]></content>
+  </entry>
+  
+</feed>

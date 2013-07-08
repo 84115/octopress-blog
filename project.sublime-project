@@ -7,20 +7,20 @@
 				"*"
 			],
 			"name": ".root",
-			"path": "/E/Dropbox/www/octo"
+			"path": "C:\\Users\\James\\octo"
 		},
 		{
 			"name": "_posts",
-			"path": "source/_posts"
+			"path": "C:\\Users\\James\\octo\\source\\_posts"
 		},
 		{
-			"path": "plugins"
+			"path": "C:\\Users\\James\\octo\\plugins"
 		},
 		{
-			"path": "sass"
+			"path": "C:\\Users\\James\\octo\\sass"
 		},
 		{
-			"path": "source"
+			"path": "C:\\Users\\James\\octo\\source"
 		}
 	]
 }

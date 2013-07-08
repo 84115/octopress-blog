@@ -1,0 +1,452 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Octopress: My Thoughts After Switching From Wordpress - James Ball</title>
+  <meta name="author" content="James Ball">
+
+  
+  <meta name="description" content="Octopress is a framework built on top of Jekyll. It&rsquo;s a static site generator which means that it lacks advance feature which would normally &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://james-ball.co.uk/blog/2013/07/05/octopress-my-thoughts-after-switching-from-wordpress">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="James Ball" type="application/atom+xml">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/modernizr+octopress.js" type="text/javascript"></script>
+  <link href="http://fonts.googleapis.com/css?family=Ubuntu:400,700" rel="stylesheet" type="text/css">
+<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><script>!window.html5 && document.write(unescape('%3Cscript src="./javascripts/lib/html5.js"%3E%3C/script%3E'))</script><![endif]-->
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-34187558-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">James Ball</a></h1>
+  
+    <h2>VLE Tech @ Ashington Learning Partnership.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:james-ball.co.uk" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/projects">Projects</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Octopress: My Thoughts After Switching From Wordpress</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-05T18:13:00+01:00" pubdate data-updated="true">Jul 5<span>th</span>, 2013</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Octopress is a framework built on top of Jekyll. It&rsquo;s a static site generator which means that it lacks advance feature which would normally require scripting and a back-end like Wordpress. If you want to know whether you should switch to Octopress or would like to know some tweaks, tips or adjustments then continue through this post.</p>
+
+<h2>Why To Migrate From Wordpress</h2>
+
+<ul>
+<li>Wordpress is a great blogging and CMS platform, but it just had too many features for  my personal blog.</li>
+<li>So far I have found Octopress easier to maintain than Wordpress. There is no need to maintain wp-super-cache which serves up static pages in the same ways as Octopress along with not needing to manage a local and external LAMP stack.</li>
+<li>WordPress blogs are a common target for hackers and spammers. To avoid this you need to keep your version of Wordpress constantly up to date.</li>
+<li>Octopress allow you to create pages using Markdown instead of or along with HTML. Markdown has a cleaner, simpler and more readable syntax.</li>
+<li>Octopress uses Jekyll to build pages. All pages of the pages are static and no server-side processing involved. This means that any requested page can deliver immediately by the server to the user.</li>
+<li>THEME ETC, READY FROM THE GET GO</li>
+</ul>
+
+
+<h2>Features You Might Miss</h2>
+
+<ul>
+<li>You can’t edit online from anywhere. With Wordpress a mobile app was available so you did not need to be at your computer/laptop to publish new posts.</li>
+<li>Yay Markdown. Shame there is no solid way to manipulate images except by hand. I have currently worked around this by using Picasa to host my images which will cache my images and resize my images.</li>
+<li>Octopress does not feature drafts, previews or publishing. When you deploy your site, you deploy everything. And the publication date is the date it was started, not when it&rsquo;s finished.</li>
+<li>Although it&rsquo;s nice not having to use the web interface it&rsquo;s also a feature which I also miss being able to post from anywhere, on almost any device.</li>
+<li><strong>SLOW PREVIEW LARGE POST</strong></li>
+<li>Octopress has less plugins and themes available than Wordpress, If you want more features you will need to wait for someone to write it or write it yourself.</li>
+<li>By default Octopress does not have a comment system. Although there is the option to use an external service for page comments such as Disqus. But using a service like this means that the comments are not hosted on your service and you lack the flexibility of the Wordpress commenting system.</li>
+</ul>
+
+
+<h2>Conclusion</h2>
+
+<p>Octopress is a great platform targeted at programmers who want to start blogging without having the hassle of customizing static page generators and caching on Wordpress. Personally I think that Octopress is ideal for my personal blog or a blog maintained by several developers which is where version control becomes essential. Although it is not practical for other user like a normal blogger who just wants to write content, a copy-editor or a business looking for more advance features such as LOREMIPSUM.</p>
+
+<h1>Tips, Tweaks &amp; Adjustments</h1>
+
+<p>&hellip;</p>
+
+<h2>Faster Page Generation Using Isolation</h2>
+
+<p>If you have a lot post in <code>source/_posts</code> then it could take a long time to compile your posts every time you update you blog.</p>
+
+<p>If you are only working on 1 post at a time then it would make sense to only compile that page, to do this use <code>rake isolate[post_name]</code>.<br/>
+This will isolate the post your are working on then automatically move all other posts to <code>source/_stash</code>.</p>
+
+<p>When you are ready to publish your site, use <code>rake integrate</code>, which will move all posts from <code>source/_stash</code> and move them back to <code>source/_posts</code>.</p>
+
+<h2>Custom 404 Page</h2>
+
+<p><a href="/blog/2013/06/21/octopress-custom-404-page/">This is taken from a tutorial I have written in the past.</a></p>
+
+<p>Open up <code>config.ru</code> from the root directory and update the sinatra <code>not_found</code> route to the following:</p>
+
+<figure class='code'><figcaption><span>config.ru </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">not_found</span> <span class="k">do</span>
+</span><span class='line'>  <span class="n">send_sinatra_file</span><span class="p">(</span><span class="s1">&#39;404&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This will redirect to <code>http://yourdomain.com/404/</code> where the page is found, but we still need to create a page.</p>
+
+<p>To do this use <code>rake new_page[404]</code>. This will create a new file named <code>index.markdown</code> in your <code>/source/404</code> directory:</p>
+
+<figure class='code'><figcaption><span>404/index</span><a href='/404/'>link</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>---
+</span><span class='line'>layout: page
+</span><span class='line'>title: "404 Error"
+</span><span class='line'>comments: false
+</span><span class='line'>sharing: false
+</span><span class='line'>footer: false
+</span><span class='line'>---
+</span><span class='line'>Whoops, the page you’re looking for cannot be found.
+</span><span class='line'>
+</span><span class='line'>Maybe you can find what you are looking for in the [archives](/blog/archives/).</span></code></pre></td></tr></table></div></figure>
+
+
+<p>View <a href="/404/">my 404 page</a> here.</p>
+
+<h2>Related Posts</h2>
+
+<p>There is a related post plugin already included in Jekyll, to use it  open up the <code>_layouts/posts.html</code> template and edit it</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;a&gt;</span>CODE...<span class="nt">&lt;/a&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>To enable this function open up <code>_config.yml</code> and set <code>lsi: true</code><br/>
+The lsi option will use a statistical analysis to calculate which pages are most relevant.<br/>
+Now you need to install GSL using Ruby Gems.</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>gem install gsl
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>After GSL is installed you can regenerated your blog.</p>
+
+<h2>Category List / Cloud Tree</h2>
+
+<p>Download the files from <a href="https://github.com/tokkonopapa/octopress-tagcloud">Github</a>.<br/>
+1. Save <code>tag_cloud.rb</code> to <code>plugins/tag_cloud.rb</code><br/>
+2. Save <code>category_list.html</code> to <code>source/_includes/custom/asides/category_list.html</code><br/>
+3. Append to default_asides in <code>_config.yml</code>:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='yaml'><span class='line'><span class="l-Scalar-Plain">default_asides</span><span class="p-Indicator">:</span> <span class="p-Indicator">[</span><span class="nv">custom/asides/category_list.html</span><span class="p-Indicator">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This plugin was created by <a href="https://github.com/tokkonopapa">tokkonopapa</a>.</p>
+
+<h2>Escaping Special Character In Markdown</h2>
+
+<p>You can escape special characters in Markdown used in formatting using a <code>\</code>.
+For a list of characters you can escape take a look at this <a href="http://daringfireball.net/projects/markdown/syntax#backslash">article</a> from <a href="http://daringfireball.net">Daring Fireball</a>.</p>
+
+<h2>Popular Posts</h2>
+
+<ol>
+<li>Open up your Gemfile and add this: <code>gem 'octopress-popular-posts'</code></li>
+<li>Install it using Bundler: <code>bundle install</code></li>
+<li>Run the installation command through Bundler: <code>bundle exec octopress-popular-posts install</code><br/>
+The popular posts asides will now generate whenever you run: <code>rake generate</code></li>
+<li>Open up <code>config.yml</code> and add this line:</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>popular_posts_count: 3</span></code></pre></td></tr></table></div></figure>
+
+
+<p>
+Append to default_asides in <code>_config.yml</code>:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='yaml'><span class='line'><span class="l-Scalar-Plain">default_asides</span><span class="p-Indicator">:</span> <span class="p-Indicator">[</span><span class="nv">custom/asides/popular_posts.html</span><span class="p-Indicator">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Offloading Images to Picasa</h2>
+
+<p>At first I hosted all of my images using Octopress, then later switch to Picasa to host my images becuase of the following.</p>
+
+<ul>
+<li>Images will be delivered from CDN (free)</li>
+<li>Images will cache &amp; resize on the fly.</li>
+<li>You can create custom image sizes.</li>
+<li>Optimize image by selecting image quality.</li>
+</ul>
+
+
+<h2>Conclusion</h2>
+
+<p><a href="http://jekyllrb.com/docs/plugins/#available_plugins">Jekyll</a>
+<a href="http://github.com/imathis/octopress/wiki/3rd-party-plugins">Octopress</a></p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">James Ball</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-05T18:13:00+01:00" pubdate data-updated="true">Jul 5<span>th</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/octopress/'>Octopress</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://james-ball.co.uk/blog/2013/07/05/octopress-my-thoughts-after-switching-from-wordpress/" data-via="" data-counturl="http://james-ball.co.uk/blog/2013/07/05/octopress-my-thoughts-after-switching-from-wordpress/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/06/28/css3-animate-dog-eared-icons/" title="Previous Post: CSS3: Animate Dog Eared Icons">&laquo; CSS3: Animate Dog Eared Icons</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2014/01/01/my-favourite-albums-of-2013/" title="Next Post: My Favorite Albums Of 2013">My Favorite Albums Of 2013 &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/01/01/my-favourite-albums-of-2013/">My Favorite Albums of 2013</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/07/05/octopress-my-thoughts-after-switching-from-wordpress/">Octopress: My Thoughts After Switching From Wordpress</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/06/28/css3-animate-dog-eared-icons/">CSS3: Animate Dog Eared Icons</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/06/21/octopress-custom-404-page/">Octopress: Custom 404 Page</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/06/21/frogos-trial-scheme/">FrogOS: Trial Scheme</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+  <h1>Find Me On</h1>
+  <ul>
+    <li><a href="http://github.com/84115">Github</a></li>
+    <li><a href="http://plus.google.com/u/0/101335028874759353340">Google+</a></li>
+    <li><a href="http://jsfiddle.net/user/84115/fiddles/">JsFiddle</a></li>
+    <li><a href="http://steamcommunity.com/id/84115">Steam</a></li>
+    <li><a href="http://twitter.com/J_84115">Twitter</a></li>
+  </ul>
+
+  <h1>Friends</h1>
+  <ul>
+    <li><a target="_blank" href="http://alfieblincowe.wordpress.com/">Alfie Blincowe</a></li>
+    <li><a target="_blank" href="http://crossesinboxes.org/">Crosses In Boxes</a></li>
+  </ul>
+</section>
+<section>
+  <h1>Categories</h1>
+  <ul id="category-list"><li><a href='/blog/categories/css3'>CSS3 (1)</a></li><li><a href='/blog/categories/frog'>Frog (1)</a></li><li><a href='/blog/categories/images'>Images (2)</a></li><li><a href='/blog/categories/misc'>Misc (2)</a></li><li><a href='/blog/categories/music'>Music (1)</a></li><li><a href='/blog/categories/octopress'>Octopress (2)</a></li><li><a href='/blog/categories/vle'>VLE (1)</a></li><li><a href='/blog/categories/workflowy'>Workflowy (1)</a></li></ul>
+</section>
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  &copy; 2013, James Ball -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a><a href="#" onClick="$('html, body').animate({ scrollTop: 0 }, 'slow');" style="float:right;text-decoration:none;">↑</a></span>
+</p>
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'james-ball';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://james-ball.co.uk/blog/2013/07/05/octopress-my-thoughts-after-switching-from-wordpress/';
+        var disqus_url = 'http://james-ball.co.uk/blog/2013/07/05/octopress-my-thoughts-after-switching-from-wordpress/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

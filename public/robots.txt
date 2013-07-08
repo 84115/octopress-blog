@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: http://james-ball.co.uk/sitemap.xml 

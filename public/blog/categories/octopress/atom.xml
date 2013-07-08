@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Octopress | James Ball]]></title>
+  <link href="http://james-ball.co.uk/blog/categories/octopress/atom.xml" rel="self"/>
+  <link href="http://james-ball.co.uk/"/>
+  <updated>2013-07-08T00:24:51+01:00</updated>
+  <id>http://james-ball.co.uk/</id>
+  <author>
+    <name><![CDATA[James Ball]]></name>
+    <email><![CDATA[hello@james-ball.co.uk]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Octopress: My Thoughts After Switching From Wordpress]]></title>
+    <link href="http://james-ball.co.uk/blog/2013/07/05/octopress-my-thoughts-after-switching-from-wordpress/"/>
+    <updated>2013-07-05T18:13:00+01:00</updated>
+    <id>http://james-ball.co.uk/blog/2013/07/05/octopress-my-thoughts-after-switching-from-wordpress</id>
+    <content type="html"><![CDATA[<p>Octopress is a framework built on top of Jekyll. It&rsquo;s a static site generator which means that it lacks advance feature which would normally require scripting and a back-end like Wordpress. If you want to know whether you should switch to Octopress or would like to know some tweaks, tips or adjustments then continue through this post.</p>
+
+<h2>Why To Migrate From Wordpress</h2>
+
+<ul>
+<li>Wordpress is a great blogging and CMS platform, but it just had too many features for  my personal blog.</li>
+<li>So far I have found Octopress easier to maintain than Wordpress. There is no need to maintain wp-super-cache which serves up static pages in the same ways as Octopress along with not needing to manage a local and external LAMP stack.</li>
+<li>WordPress blogs are a common target for hackers and spammers. To avoid this you need to keep your version of Wordpress constantly up to date.</li>
+<li>Octopress allow you to create pages using Markdown instead of or along with HTML. Markdown has a cleaner, simpler and more readable syntax.</li>
+<li>Octopress uses Jekyll to build pages. All pages of the pages are static and no server-side processing involved. This means that any requested page can deliver immediately by the server to the user.</li>
+<li>THEME ETC, READY FROM THE GET GO</li>
+</ul>
+
+
+<h2>Features You Might Miss</h2>
+
+<ul>
+<li>You can’t edit online from anywhere. With Wordpress a mobile app was available so you did not need to be at your computer/laptop to publish new posts.</li>
+<li>Yay Markdown. Shame there is no solid way to manipulate images except by hand. I have currently worked around this by using Picasa to host my images which will cache my images and resize my images.</li>
+<li>Octopress does not feature drafts, previews or publishing. When you deploy your site, you deploy everything. And the publication date is the date it was started, not when it&rsquo;s finished.</li>
+<li>Although it&rsquo;s nice not having to use the web interface it&rsquo;s also a feature which I also miss being able to post from anywhere, on almost any device.</li>
+<li><strong>SLOW PREVIEW LARGE POST</strong></li>
+<li>Octopress has less plugins and themes available than Wordpress, If you want more features you will need to wait for someone to write it or write it yourself.</li>
+<li>By default Octopress does not have a comment system. Although there is the option to use an external service for page comments such as Disqus. But using a service like this means that the comments are not hosted on your service and you lack the flexibility of the Wordpress commenting system.</li>
+</ul>
+
+
+<h2>Conclusion</h2>
+
+<p>Octopress is a great platform targeted at programmers who want to start blogging without having the hassle of customizing static page generators and caching on Wordpress. Personally I think that Octopress is ideal for my personal blog or a blog maintained by several developers which is where version control becomes essential. Although it is not practical for other user like a normal blogger who just wants to write content, a copy-editor or a business looking for more advance features such as LOREMIPSUM.</p>
+
+<h1>Tips, Tweaks &amp; Adjustments</h1>
+
+<p>&hellip;</p>
+
+<h2>Faster Page Generation Using Isolation</h2>
+
+<p>If you have a lot post in <code>source/_posts</code> then it could take a long time to compile your posts every time you update you blog.</p>
+
+<p>If you are only working on 1 post at a time then it would make sense to only compile that page, to do this use <code>rake isolate[post_name]</code>.<br/>
+This will isolate the post your are working on then automatically move all other posts to <code>source/_stash</code>.</p>
+
+<p>When you are ready to publish your site, use <code>rake integrate</code>, which will move all posts from <code>source/_stash</code> and move them back to <code>source/_posts</code>.</p>
+
+<h2>Custom 404 Page</h2>
+
+<p><a href="/blog/2013/06/21/octopress-custom-404-page/">This is taken from a tutorial I have written in the past.</a></p>
+
+<p>Open up <code>config.ru</code> from the root directory and update the sinatra <code>not_found</code> route to the following:
+<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>config.ru </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">not_found</span> <span class="k">do</span>
+</span><span class='line'>  <span class="n">send_sinatra_file</span><span class="p">(</span><span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="mi">404</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;)</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+This will redirect to <code>http://yourdomain.com/404/</code> where the page is found, but we still need to create a page.</p>
+
+<p>To do this use <code>rake new_page[404]</code>. This will create a new file named <code>index.markdown</code> in your <code>/source/404</code> directory:</p>
+
+<h2><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>404/index</span><a href='/404/'>link</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/h2>
+</span><span class='line'>
+</span><span class='line'>&lt;p>layout: page
+</span><span class='line'>title: &ldquo;404 Error&rdquo;
+</span><span class='line'>comments: false
+</span><span class='line'>sharing: false&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;h2>footer: false&lt;/h2>
+</span><span class='line'>
+</span><span class='line'>&lt;p>Whoops, the page you’re looking for cannot be found.&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>Maybe you can find what you are looking for in the &lt;a href="/blog/archives/">archives&lt;/a>.</span></code></pre></td></tr></table></div></figure></notextile></div>
+View <a href="/404/">my 404 page</a> here.</p>
+
+<h2>Related Posts</h2>
+
+<p>There is a related post plugin already included in Jekyll, to use it  open up the <code>_layouts/posts.html</code> template and edit it<br/>
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;a&gt;</span>CODE<span class="ni">&amp;hellip;</span><span class="nt">&lt;/a&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+To enable this function open up <code>_config.yml</code> and set <code>lsi: true</code><br/>
+The lsi option will use a statistical analysis to calculate which pages are most relevant.<br/>
+Now you need to install GSL using Ruby Gems.
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>gem install gsl
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+After GSL is installed you can regenerated your blog.</p>
+
+<h2>Category List / Cloud Tree</h2>
+
+<p>Download the files from <a href="https://github.com/tokkonopapa/octopress-tagcloud">Github</a>.<br/>
+1. Save <code>tag_cloud.rb</code> to <code>plugins/tag_cloud.rb</code><br/>
+2. Save <code>category_list.html</code> to <code>source/_includes/custom/asides/category_list.html</code><br/>
+3. Append to default_asides in <code>_config.yml</code>:
+   <div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='yaml'><span class='line'><span class="l-Scalar-Plain">default_asides</span><span class="p-Indicator">:</span> <span class="p-Indicator">[</span><span class="nv">custom/asides/category_list.html</span><span class="p-Indicator">]</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>This plugin was created by <a href="https://github.com/tokkonopapa">tokkonopapa</a>.</p>
+
+<h2>Escaping Special Character In Markdown</h2>
+
+<p>You can escape special characters in Markdown used in formatting using a <code>\</code>.
+For a list of characters you can escape take a look at this <a href="http://daringfireball.net/projects/markdown/syntax#backslash">article</a> from <a href="http://daringfireball.net">Daring Fireball</a>.</p>
+
+<h2>Popular Posts</h2>
+
+<ol>
+<li>Open up your Gemfile and add this: <code>gem 'octopress-popular-posts'</code></li>
+<li>Install it using Bundler: <code>bundle install</code></li>
+<li>Run the installation command through Bundler: <code>bundle exec octopress-popular-posts install</code><br/>
+The popular posts asides will now generate whenever you run: <code>rake generate</code></li>
+<li>Open up <code>config.yml</code> and add this line:
+<code>
+popular_posts_count: 3
+</code><br/>
+Append to default_asides in <code>_config.yml</code>: <div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='yaml'><span class='line'><span class="l-Scalar-Plain">default_asides</span><span class="p-Indicator">:</span> <span class="p-Indicator">[</span><span class="nv">custom/asides/popular_posts.html</span><span class="p-Indicator">]</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></li>
+</ol>
+
+
+<h2>Offloading Images to Picasa</h2>
+
+<p>At first I hosted all of my images using Octopress, then later switch to Picasa to host my images becuase of the following.</p>
+
+<ul>
+<li>Images will be delivered from CDN (free)</li>
+<li>Images will cache &amp; resize on the fly.</li>
+<li>You can create custom image sizes.</li>
+<li>Optimize image by selecting image quality.</li>
+</ul>
+
+
+<h2>Conclusion</h2>
+
+<p><a href="http://jekyllrb.com/docs/plugins/#available_plugins">Jekyll</a>
+<a href="http://github.com/imathis/octopress/wiki/3rd-party-plugins">Octopress</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Octopress: Custom 404 page]]></title>
+    <link href="http://james-ball.co.uk/blog/2013/06/21/octopress-custom-404-page/"/>
+    <updated>2013-06-21T21:38:00+01:00</updated>
+    <id>http://james-ball.co.uk/blog/2013/06/21/octopress-custom-404-page</id>
+    <content type="html"><![CDATA[<p>Open up <code>config.ru</code> from the root directory and update the sinatra <code>not_found</code> route to the following:
+<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>config.ru </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">not_found</span> <span class="k">do</span>
+</span><span class='line'>  <span class="n">send_sinatra_file</span><span class="p">(</span><span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="mi">404</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;)</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+This will redirect to <code>http://yourdomain.com/404/</code> where the page is found, but we still need to create a page.</p>
+
+<p>To do this use <code>rake new_page[404]</code>. This will create a new file named <code>index.markdown</code> in your <code>/source/404</code> directory:</p>
+
+<h2><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>404/index</span><a href='/404/'>link</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/h2>
+</span><span class='line'>
+</span><span class='line'>&lt;p>layout: page
+</span><span class='line'>title: &ldquo;404 Error&rdquo;
+</span><span class='line'>comments: false
+</span><span class='line'>sharing: false&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;h2>footer: false&lt;/h2>
+</span><span class='line'>
+</span><span class='line'>&lt;p>Whoops, the page you’re looking for cannot be found.&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>Maybe you can find what you are looking for in the &lt;a href="/blog/archives/">archives&lt;/a>.</span></code></pre></td></tr></table></div></figure></notextile></div>
+View <a href="/404/">my 404 page</a> here.</p>
+]]></content>
+  </entry>
+  
+</feed>
